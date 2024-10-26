@@ -1,0 +1,90 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arima", system-ui;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* align-content: center; */
+
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #D6536D;
+  color: #EBE9E1;
+}
+
+.navbar-brand a {
+  color: #EBE9E1;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+
+
+/* Navbar links */
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links ul li a {
+  color: #EBE9E1;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: 0.3s;
+}
+
+.navbar-links ul li a:focus {
+  /* background-color: #555; */
+  
+  border-bottom-style: solid;
+  border-color: #EBE9E1;
+}
+
+
+.navbar-links ul li a:hover {
+  background-color: #FFA2B6;
+  
+  border-radius: 5px;
+}
+
+
+.search{
+ 
+  height: 40px;
+  width: 600px;
+  align-self: center;
+  
+}
+.search input{
+  height: inherit;
+  width: inherit;
+  padding: 10px 40px 10px 40px;
+  border-radius: 25px;
+     background-position: 10px center; /* Position icon */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-size: 20px 20px; /* Size of the icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
