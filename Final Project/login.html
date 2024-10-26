@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Navigation</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="data.js" defer></script>
+    <script src="logIn.js" defer></script>
+    
+</head>
+<body>
+  
+<div id="container">
+<div id="signIn" class="form visible">
+  <div id="left" class="left">
+    <h2>Sign in</h2>
+  <form>
+    <label for="email"></label>
+    <input id="email" name="email" type="email" placeholder="Email"  required>
+    <br>
+    <label for="password"></label>
+    <input id="password" name="password" type="password" placeholder="Password" required>
+
+    <div style="width: 65%;"><p id="warning"></p></div>
+    <br>
+    <button type="button" onclick="checkUser()">Sign in </button>
+  </form>
+    
+  </div>
+  <div id="right"  class="right">
+    <h2>Hello, Friend!</h2>
+    <p>Enter your personal Details And start  journey with us.</p>
+    <button onclick="showSignUp('signUp')">Sign Up </button>
+
+   
+  </div>
+</div>
+
+
+<div id="signUp" class="form hidden">
+  <div id="left" class="left">
+    <h2>Welcome Back.</h2>
+    <p>To keep connected with us please login 
+      with your Information.</p>
+    <button onclick="showSignUp('signIn')">Sign In </button>
+  </div>
+  <div id="right" class="right">
+
+
+    <h2>Create Account</h2>
+    <form>
+    <label for="name"></label>
+    <input id="name" name="name" type="name" placeholder="Name" required>
+    <br>
+    <label for="email"></label>
+    <input id="email" name="email" type="email" placeholder="Email" required>
+    <br>
+    <label for="password"></label>
+    <input id="password" name="password" type="password" placeholder="Password" required>
+    <br>
+    <button type="submit" onclick="addUser()" >Sign Up </button>
+  </form>
+  </div>
+</div>
+</div>
+
+
+
+</body>
+</html>
