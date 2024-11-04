@@ -7,39 +7,77 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
    
 </head>
 <body>
 
+  
+
 <header>
   <nav class="navbar">
     <div class="navbar-brand">
-        <a href="#">BrandLogo</a>
+        <img src="./images/logo.png" class="logo" alt="logo">
     </div>
     
     <div class="navbar-links" >
         <ul>
            
             <li><a href="#" onclick="loadPage('home.html')">Home</a></li>
-            <li><a href="#" onclick="loadPage('login.html')" >LogIn</a></li>
-            <li><a onclick="loadPage('page1.html')">test</a></li>
+            <li><a href="#" onclick="loadPage('contact.html')">Contact</a></li>
+            <li><a href="#"  id="logoutLink"> <img src="./images/logout.png"  class="logout"  alt="logOut">   </a></li>
+
 
         </ul>
     </div>
 </nav>
-
+<div id="overlay"></div>
 </header>
-<iframe id="contentFrame" src="home.html" style="width: 100%; height:91vh;"></iframe>
+
+<iframe id="contentFrame" src="home.html" ></iframe>
 
 
 <!-- JavaScript -->
 <script>
-    function loadPage(page) {
-      // Set the iframe's source to the selected page
+  function loadPage(page) {
       document.getElementById('contentFrame').src = page;
-    }
-  </script>
+  }
+
+  // Show overlay by setting its display to block
+  function showOverlay() {
+      document.getElementById("overlay").style.display = "block";
+  }
+
+  // Hide overlay by setting its display to none
+  function hideOverlay() {
+      document.getElementById("overlay").style.display = "none";
+  }
+
+  // Monitor `localStorage` for changes to `showOverlay`
+  setInterval(function() {
+      if (localStorage.getItem("showOverlay") === "true") {
+          showOverlay();
+      } else {
+          hideOverlay();
+      }
+  }, 100);  // Checks every 100ms
+
+  // Clear `showOverlay` flag when needed
+  function clearOverlayFlag() {
+      localStorage.setItem("showOverlay", "false");
+  }
+
+  // Clear `showOverlay` on page load to reset the overlay
+  window.onload = clearOverlayFlag;
+
+
+  document.getElementById('logoutLink').onclick = function(event) {
+        event.preventDefault(); // Prevents the default link behavior
+
+        // Change the interface here
+        // Example: Redirect to a logout page
+        window.location.href = "login.html"; }
+</script>
 
 </body>
 </html>

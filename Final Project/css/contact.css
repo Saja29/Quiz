@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=DynaPuff:wght@400..700&family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ .contact
+ {
+     position: relative;
+     min-height: 100vh;
+     padding: 50px 100px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: url('../images/BG.jpg');
+   
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+   
+ }
+ 
+ .contact .content
+ {
+    max-width: 800px; 
+    text-align: center;
+   
+ }
+ .contact .content h2{
+     font-size: 36px;
+     font-weight: 500;
+     color: #AC3B61;
+
+ }
+ .contact .content p{
+     font-weight: 300;
+     color: #1b146b;
+     margin-top: 10px;
+ }
+ .contact-container{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 30px;
+ }
+ 
+ .contact-container .contactInfo{
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+ }
+ .contact-container .contactInfo .box{
+     position: relative;
+     padding: 20px 0;
+     display: flex;
+ }
+ 
+ .icon img {
+    
+     display: flex;
+     align-items: center;
+     font-size: 22px;
+ }
+ .contact-container .contactInfo .box .text{
+ display: flex;
+ margin-left: 20px;
+ font-size: 16px;
+ color: #1b146b;
+ flex-direction: column;
+ font-weight: 300;
+ }
+ .contact-container .contactInfo .box .text h3{
+   font-weight: 500;
+   color: #1b146b;  
+ 
+ }
+ .contact-container .text h3{
+     display: flex;
+     align-items: center;
+     font-size: 18px; 
+ }
+ .contactform{
+     width: 100%; 
+     margin-left: 70px;
+ }
+ .contactform h2{
+     font-size: 30px;
+     color: #AC3B61;
+     font-weight: 500;
+ }
+ .contactform .inputBox {
+     position: relative;
+     width: 100%;
+     margin-top: 10px;
+ }
+ a{
+     text-decoration: none;
+     color: #1b146b;
+ }
+ .contactform .inputBox input , .contactform .inputBox textarea
+ {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0; 
+    border: none;
+    border-bottom: 2px solid #AC3B61;
+    outline: none;
+    resize: none;
+ }
+ .contactform .inputBox span
+ {
+     position: absolute;
+     left: 0;
+     padding: 5px 0;
+     font-size: 16px;
+     margin: 10px 0;
+     pointer-events: none;
+     transition: 0.5s;
+     color: #AC3B61;
+ }
+ .contactform .inputBox input:focus ~span,
+ .contactform .inputBox input:valid ~span,
+ .contactform .inputBox textarea:focus ~span,
+ .contactform .inputBox textarea:valid ~span
+ {
+ color: #1b146b;
+ font-size: 16px;
+ transform: translateY(-20px);
+ }
+ .contactform .inputBox input[type="submit"]
+ {
+     width: 100px;
+     background: #c2b3b8;
+     color: #1b146b;
+     border-radius: 10%;
+ }
+ @media(max-width: 991px)
+ {
+ 
+     .contact{
+         padding: 50px;
+         background:url(images/white.jpg);
+     }
+     .contact-container{
+         flex-direction: column;
+     }
+     .contact-container .contactInfo
+     {
+         margin-bottom: 40px;
+         width: 100%;
+     }
+     .contactform{
+         margin-left: 0px;
+     }
+ }

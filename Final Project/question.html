@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Navigation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/question.css">
+  <script src="./js/data.js" defer></script>
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+
+
+ 
+
+
+  <header> <h2 id="subjectName"></h2></header>
+  <main id="quiz" class="quiz">
+
+    <div class="questions">
+      <h2 id="questionNum">Question Num</h2>
+      <div id="question">What is the Right answer</div>
+      <div id="answers">
+        <oi>
+          <li ><span tabindex="0">test1</span></li>
+          <li ><span  tabindex="0">test</span></li>
+          <li ><span  tabindex="0">test</span> </li>
+          <li ><span tabindex="0">test</span></li>
+
+        </oi>
+
+      </div>
+      <div class="buttons">
+       
+        <button id="next">Next <span style="font-size: 22px;font-weight: bold;"> &nbsp;&nbsp;
+            &#x21AC;</span></button>
+      </div>
+    </div>
+
+    <div class="information">
+      <div class="time"> <img src="./images/timer.png" alt="stop_watch">
+        <div id="timer">
+          
+        </div>
+       
+        
+      </div>
+
+      <div class="question_box">
+        <h4>Questions:</h4>
+        <div id="calender" class="num-of-Question">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id= "score" class="score">
+    <h3>Your Score:</h3>
+    <div class="circle" id="scoreCircle">
+        <div class="fill" id="fill"></div>
+        <span id="scoreText">0 %</span>
+    </div>
+    <button id="home" onclick="window.location.href='home.html'">Go Home Page</button>
+   
+
+
+</body>
+
+</html>
